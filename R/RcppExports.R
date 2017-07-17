@@ -17,8 +17,8 @@ SIGMA <- function(Phi, TempCorInd, TimeDist, Nu) {
     .Call('womblR_SIGMA', PACKAGE = 'womblR', Phi, TempCorInd, TimeDist, Nu)
 }
 
-WAlphaCube <- function(Alpha, Z, AdjacentEdgesBoolean, W, M, Nu) {
-    .Call('womblR_WAlphaCube', PACKAGE = 'womblR', Alpha, Z, AdjacentEdgesBoolean, W, M, Nu)
+WAlphaCube <- function(Alpha, Z, W, M, Nu, WeightsInd) {
+    .Call('womblR_WAlphaCube', PACKAGE = 'womblR', Alpha, Z, W, M, Nu, WeightsInd)
 }
 
 GetLogLik <- function(DatObj_List, Para_List, DatAug_List, NKeep) {

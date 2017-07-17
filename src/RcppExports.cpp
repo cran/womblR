@@ -63,18 +63,18 @@ BEGIN_RCPP
 END_RCPP
 }
 // WAlphaCube
-arma::cube WAlphaCube(arma::vec const& Alpha, arma::vec const& Z, arma::umat const& AdjacentEdgesBoolean, arma::mat const& W, int M, int Nu);
-RcppExport SEXP womblR_WAlphaCube(SEXP AlphaSEXP, SEXP ZSEXP, SEXP AdjacentEdgesBooleanSEXP, SEXP WSEXP, SEXP MSEXP, SEXP NuSEXP) {
+arma::cube WAlphaCube(arma::vec const& Alpha, arma::colvec const& Z, arma::mat const& W, int M, int Nu, int WeightsInd);
+RcppExport SEXP womblR_WAlphaCube(SEXP AlphaSEXP, SEXP ZSEXP, SEXP WSEXP, SEXP MSEXP, SEXP NuSEXP, SEXP WeightsIndSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< arma::vec const& >::type Alpha(AlphaSEXP);
-    Rcpp::traits::input_parameter< arma::vec const& >::type Z(ZSEXP);
-    Rcpp::traits::input_parameter< arma::umat const& >::type AdjacentEdgesBoolean(AdjacentEdgesBooleanSEXP);
+    Rcpp::traits::input_parameter< arma::colvec const& >::type Z(ZSEXP);
     Rcpp::traits::input_parameter< arma::mat const& >::type W(WSEXP);
     Rcpp::traits::input_parameter< int >::type M(MSEXP);
     Rcpp::traits::input_parameter< int >::type Nu(NuSEXP);
-    rcpp_result_gen = Rcpp::wrap(WAlphaCube(Alpha, Z, AdjacentEdgesBoolean, W, M, Nu));
+    Rcpp::traits::input_parameter< int >::type WeightsInd(WeightsIndSEXP);
+    rcpp_result_gen = Rcpp::wrap(WAlphaCube(Alpha, Z, W, M, Nu, WeightsInd));
     return rcpp_result_gen;
 END_RCPP
 }

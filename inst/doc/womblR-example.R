@@ -20,7 +20,8 @@ PlotVfTimeSeries(Y = VFSeries$DLS,
                  Time = VFSeries$Time,
                  main = "Visual field sensitivity time series \n at each location",
                  xlab = "Days from baseline visit",
-                 ylab = "Differential light sensitivity (dB)")
+                 ylab = "Differential light sensitivity (dB)",
+                 line.col = 1, line.type = 1, line.reg = FALSE)
 
 ## ------------------------------------------------------------------------
 blind_spot <- c(26, 35) # define blind spot

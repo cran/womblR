@@ -1,6 +1,6 @@
-1e7179270ae4a49db95cef9860ad9190 *DESCRIPTION
+3cd26fa1519b73e3dfd8ab4979d3aaa9 *DESCRIPTION
 4bfa3ba61f2358ddf13358d6a737780f *NAMESPACE
-b6cd36bc0cf1113f99ab1b1ceda38cce *NEWS.md
+f29f44c07dadce4868375a1db453b4c6 *NEWS.md
 766327f643b2afa9e9ddb0a07bdbd476 *R/DIAG_diagnostics.R
 073866dcd9500e5879aafcf45a9118f6 *R/GarwayHeath-data.R
 b7dee096583e6b6d5eb08e70793bc221 *R/HFAII_Queen-data.R
@@ -15,7 +15,7 @@ d9bc79cac7a9c2840aa27d4036fc8f3b *R/PLOT_Sensitivity.R
 63f9296b74a328f9be5e339ca4a6b1ee *R/PLOT_VFTimeSeries.R
 108369a8a370e2e1e131aed302e068b8 *R/POST_PosteriorWij.R
 3a0425180a7f25b378f7bc2da2f4bdf6 *R/PRED_predict.R
-72cfa56b3421511a12159dde760ce53f *R/RcppExports.R
+57645752e9c4f4a91fbea01b3d5cf22b *R/RcppExports.R
 d033d2eab15473bc73e35bb1f6833f4a *R/VFSeries-data.R
 b8d5390f9271adbef247a5452bb7a1d3 *R/womblR-package.R
 ba84ac315aa9c22cefca585ac60deffb *build/vignette.rds
@@ -24,9 +24,9 @@ b86d00dacc6eb20cd12e649bf63653d6 *data/HFAII_Queen.RData
 61e50eed09a7bb4a7915e92d6a7eb150 *data/HFAII_QueenHF.RData
 012076e436938c56d131335111ee1183 *data/HFAII_Rook.RData
 81d721d976270e1da1bfc38e39f5d0a0 *data/VFSeries.RData
-e734b65f30bdc645ebe4ced1c50100d4 *inst/doc/womblR-example.R
-d0a3718367a2e8774870c7686b7a3655 *inst/doc/womblR-example.Rmd
-3914fe41d26315e95dc13c170e4c47b7 *inst/doc/womblR-example.html
+49ec53c6f2e4641c035d721ce94c0423 *inst/doc/womblR-example.R
+f98b273141e234eace7ec2c02c6b8d9f *inst/doc/womblR-example.Rmd
+01cb9f5ecbd1c6883acc9a9bd629cec4 *inst/doc/womblR-example.html
 2a6fd8a9e0ad36a40cf9e2fdc5d09e9b *man/GarwayHeath.Rd
 5af8dd766e7a7cacf2c8e592149cdc61 *man/HFAII_Queen.Rd
 76cc9a1a9dc4d91015a9c02fe84a0ddc *man/HFAII_QueenHF.Rd
@@ -49,7 +49,7 @@ b42b104654492a5d877e53d34404fa0f *src/DIAG_NormalLogLik.cpp
 4d48f9a7b81814d33f5d399820e1a15e *src/DIAG_SamplePPD.cpp
 1ab90a05ce477915b9d2e216cc789aba *src/DIAG_TobitLogLik.cpp
 614b34b6bd9e942c10d704931a6a1f09 *src/DIAG_diagnostics.h
-faec029ca0ae774dec722b2e36f061ce *src/DistributionFunctions.cpp
+b550bd014c228d7d1accd8cb3730c308 *src/DistributionFunctions.cpp
 fd4aa549670841c4e56ee81c29e0cb8f *src/MCMC_Conversion.cpp
 e6114143e2f536b91e083e44d60e9bc2 *src/MCMC_STBDwDM.cpp
 c55c086ccfb9b2197ebe8bc79587cce3 *src/MCMC_STBDwDM.h
@@ -61,6 +61,6 @@ e86cc5312f1f93edad5aa3747b72ee80 *src/PRED_Conversion.cpp
 02a3d0a323975881ca58399c5e86ca77 *src/PRED_ThetaKrigging.cpp
 61eb43e9330bdc0454f858b2836bf211 *src/PRED_YKrigging.cpp
 0cfd8f4ae561f00e0c5c9087f05ad0d3 *src/PRED_predictions.h
-a1e254a257bbcfdb8522e37c14c44025 *src/RcppExports.cpp
+15d3f74656febda9b63452b3884b6fb5 *src/RcppExports.cpp
 7a1aaeb14ef9b82bda220893491a731f *src/UtilityFunctions.cpp
-d0a3718367a2e8774870c7686b7a3655 *vignettes/womblR-example.Rmd
+f98b273141e234eace7ec2c02c6b8d9f *vignettes/womblR-example.Rmd

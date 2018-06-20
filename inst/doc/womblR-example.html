@@ -12,7 +12,7 @@
 
 <meta name="author" content="Samuel I. Berchuck" />
 
-<meta name="date" content="2017-09-12" />
+<meta name="date" content="2018-06-20" />
 
 <title>Introduction to using R package: womblR</title>
 
@@ -70,7 +70,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">Introduction to using R package: <code>womblR</code></h1>
 <h4 class="author"><em>Samuel I. Berchuck</em></h4>
-<h4 class="date"><em>2017-09-12</em></h4>
+<h4 class="date"><em>2018-06-20</em></h4>
 
 
 
@@ -78,7 +78,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2>Use of <code>womblR</code></h2>
 <p>This is a brief description of how to use the <code>womblR</code> package within the context of glaucoma progression. We begin by loading the package.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(womblR)</code></pre></div>
-<p>In the <code>womblR</code> package there is a longitudinal series of visual fields that we will use to exemplify the statistical models contained in the package. The data object is called <code>VFSeries</code> and has four variables, <code>Visit</code>, <code>DLS</code>, <code>Time</code> and <code>Locaion</code>. The data object loads automatically; here’s what the data looks like,</p>
+<p>In the <code>womblR</code> package there is a longitudinal series of visual fields that we will use to exemplify the statistical models contained in the package. The data object is called <code>VFSeries</code> and has four variables, <code>Visit</code>, <code>DLS</code>, <code>Time</code> and <code>Location</code>. The data object loads automatically; here’s what the data looks like,</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(VFSeries)</code></pre></div>
 <pre><code>##   Visit DLS Time Location
 ## 1     1  25    0        1
@@ -156,13 +156,14 @@ Tuning &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="d
                        <span class="dt">Family =</span> <span class="st">&quot;tobit&quot;</span>, 
                        <span class="dt">TemporalStructure =</span> <span class="st">&quot;exponential&quot;</span>,
                        <span class="dt">Distance =</span> <span class="st">&quot;circumference&quot;</span>,
+                       <span class="dt">Weights =</span> <span class="st">&quot;continuous&quot;</span>,
                        <span class="dt">Rho =</span> <span class="fl">0.99</span>,
                        <span class="dt">ScaleY =</span> <span class="dv">10</span>, 
                        <span class="dt">ScaleDM =</span> <span class="dv">100</span>,
                        <span class="dt">Seed =</span> <span class="dv">54</span>)
 ## Burn-in progress:  |*************************************************|
 ## Sampler progress:  0%..  10%..  20%..  30%..  40%..  50%..  60%..  70%..  80%..  90%..  100%..</code></pre></div>
-<p>The first line of arguments are the data objects, <code>Y</code>, <code>DM</code>, <code>W</code>, and <code>Time</code>. These objects must be specified for <code>STBDwDM</code> to run. The second line of objects are the MCMC characteristics objects we defined previously. These objects do not need to be defined for <code>STBDwDM</code> to function, but are provided for the user to custimize the model to their choosing. If they are not provided, defaults are given. Next, we specify that <code>Family</code> be equal to <code>tobit</code> since we know that visual field data is censored. Furthermore, we specify <code>TemporalStructure</code> to be the <code>exponential</code> temporal correlation structure. Our distance metric on the visual field is based on the circumference of the optic disc, so we define <code>Distance</code> to be <code>circumference</code>. Finally, we define the following scalar variables, <code>Rho</code>, <code>ScaleY</code>, <code>ScaleDM</code>, and <code>Seed</code>, which are defined in the manual for <code>STBDwDM</code>.</p>
+<p>The first line of arguments are the data objects, <code>Y</code>, <code>DM</code>, <code>W</code>, and <code>Time</code>. These objects must be specified for <code>STBDwDM</code> to run. The second line of objects are the MCMC characteristics objects we defined previously. These objects do not need to be defined for <code>STBDwDM</code> to function, but are provided for the user to custimize the model to their choosing. If they are not provided, defaults are given. Next, we specify that <code>Family</code> be equal to <code>tobit</code> since we know that visual field data is censored. Furthermore, we specify <code>TemporalStructure</code> to be the <code>exponential</code> temporal correlation structure. Our distance metric on the visual field is based on the circumference of the optic disc, so we define <code>Distance</code> to be <code>circumference</code>. Then, the adjacency weights are specified to be <code>continuous</code>, as opposed to the <code>binary</code> specification of Lee and Mitchell (2011). Finally, we define the following scalar variables, <code>Rho</code>, <code>ScaleY</code>, <code>ScaleDM</code>, and <code>Seed</code>, which are defined in the manual for <code>STBDwDM</code>.</p>
 <p>The following are the returned objects from <code>STBDwDM</code>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">names</span>(reg.STBDwDM)</code></pre></div>
 <pre><code>##  [1] &quot;mu&quot;         &quot;tau2&quot;       &quot;alpha&quot;      &quot;delta&quot;      &quot;T&quot;         

@@ -4,10 +4,11 @@
 \alias{STBDwDM}
 \title{MCMC sampler for spatiotemporal boundary detection with dissimilarity metric.}
 \usage{
-STBDwDM(Y, DM, W, Time, Starting = NULL, Hypers = NULL, Tuning = NULL,
-  MCMC = NULL, Family = "tobit", TemporalStructure = "exponential",
-  Distance = "circumference", Weights = "continuous", Rho = 0.99,
-  ScaleY = 10, ScaleDM = 100, Seed = 54)
+STBDwDM(Y, DM, W, Time, Starting = NULL, Hypers = NULL,
+  Tuning = NULL, MCMC = NULL, Family = "tobit",
+  TemporalStructure = "exponential", Distance = "circumference",
+  Weights = "continuous", Rho = 0.99, ScaleY = 10, ScaleDM = 100,
+  Seed = 54)
 }
 \arguments{
 \item{Y}{An \code{N} dimensional vector containing the observed outcome data.
@@ -160,11 +161,10 @@ Details of the underlying statistical model can be found in the article by
 Berchuck et al. (2018), "Diagnosing Glaucoma Progression with Visual Field Data Using
 a Spatiotemporal Boundary Detection Method", <arXiv:1805.11636>.
 }
-\author{
-Samuel I. Berchuck
-}
 \references{
 Berchuck et al. (2018), "Diagnosing Glaucoma Progression with Visual Field Data Using
 a Spatiotemporal Boundary Detection Method", <arXiv:1805.11636>.
 }
-
+\author{
+Samuel I. Berchuck
+}

@@ -20,4 +20,3 @@ Spatiotemporal Boundary Detection Method", <arXiv:1805.11636>.
 \author{
 Samuel I. Berchuck \email{sib2@duke.edu}
 }
-

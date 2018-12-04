@@ -1,3 +1,7 @@
+# womblR 1.0.4 (2018-12-04)
+
+* The Makevars file was updated. 
+
 # womblR 1.0.3 (2018-06-19)
 
 * The function `PlotSensitivity` has been updated so the plotted values correspond to the user provided legend limits.
